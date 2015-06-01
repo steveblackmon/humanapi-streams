@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>co.humanapi</groupId>
+    <artifactId>streams</artifactId>
+    <version>0.1-SNAPSHOT</version>
+
+    <packaging>pom</packaging>
+    <name>humanapi Streams</name>
+
+    <properties>
+        <java.version>1.8</java.version>
+        <junit.version>4.11</junit.version>
+        <logback.version>1.1.2</logback.version>
+        <typesafe.version>1.2.0</typesafe.version>
+        <streams.version>0.1-SNAPSHOT</streams.version>
+        <elasticsearch.version>1.4.0.Beta1</elasticsearch.version>
+        <lucene.version>4.10.1</lucene.version>
+    </properties>
+    <repositories>
+        <repository>
+            <id>apache.snapshots</id>
+            <name>Apache Snapshot Repository</name>
+            <url>http://repository.apache.org/snapshots</url>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+        </repository>
+    </repositories>
+
+    <modules>
+        <module>components</module>
+        <module>pipelines</module>
+    </modules>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.elasticsearch</groupId>
+                <artifactId>elasticsearch</artifactId>
+                <version>${elasticsearch.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.lucene</groupId>
+                <artifactId>lucene-core</artifactId>
+                <version>${lucene.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+</project>

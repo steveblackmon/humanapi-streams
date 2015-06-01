@@ -1,0 +1,48 @@
+{
+    "type" : "object",
+    "title" : "Human Api Response",
+    "javaType": "co.humanapi.pojo.HumanApiResponse",
+    "description" : "Generic response from HumanApi",
+    "properties" : {
+        "id" : {
+            "type" : "string",
+            "description": "The Id of the resource"
+        },
+        "userId" : {
+            "type" : "string",
+            "description": "The global Id of the user"
+        },
+        "startTime": {
+            "type" : "string",
+            "format": "date-time",
+            "description" : "The start time of the activity"
+        },
+        "endTime": {
+            "type" : "string",
+            "format": "date-time",
+            "description" : "The start time of the activity"
+        },
+        "type" : {
+            "type" : "string",
+            "description": "The type of activity, such as walking, running, cycling"
+        },
+        "source" : {
+            "type" : "string",
+            "description": "The name of the originating service."
+        },
+        "sourceData" : {
+            "type" : "object",
+            "description": "Additional data from the source that does not fit into the humanapi model. This data can include things such as \"Fuel points\" for the Nike service."
+        },
+        "createdAt": {
+            "type" : "string",
+            "format": "date-time",
+            "description" : "The time the activity was created on the Human API server"
+        },
+        "updatedAt": {
+            "type" : "string",
+            "format": "date-time",
+            "description" : "The time the activity was updated on the Human API server"
+        }
+    }
+}
